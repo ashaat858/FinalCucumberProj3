@@ -1,0 +1,10 @@
+#@Feature
+#Feature: Set sky White background
+  #As a user
+  #I want to set the background color to sky white
+  #So that the page looks more appealing
+#@Scenario2
+  #Scenario: Click on "Set White Background" button
+    #Given the Set White Background button exists
+    #When I click on the button
+    #Then the background color will change to white

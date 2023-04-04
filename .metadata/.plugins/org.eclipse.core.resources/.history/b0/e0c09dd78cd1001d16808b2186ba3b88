@@ -1,0 +1,37 @@
+package steps;
+
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.MainPage;
+import pages.TestBase;
+
+public class StepDefenition extends TestBase {
+	MainPage mainpage;
+	
+	@Before
+	public void BeforeRun() {
+		initDriver();
+		mainpage = PageFactory.initElements(driver, MainPage.class);
+		driver.get("https://techfios.com/test/104/");
+}
+	@Given("'Set SkyBlue Background' button exists")
+	public void user_is_on_the_techfios_login_page() {
+		
+		mainpage.clickBluePageButton();
+	}
+
+	@When("I click on the button")
+	public void I_Click_On_Blue_Button() {
+		
+		mainpage.clickBluePageButton();
+	   
+	}
+	@Then("the background color will change to sky blue")
+	public void the_background_color_will_change_to_sky_blue() {
+		
+	}
+}
